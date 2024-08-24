@@ -66,7 +66,166 @@
   .videoplayer{
     width: 100%;
     max-width: 1184px;
-    height: 580px;
+    height: 600px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+  .question{
+    /* How can the BADIR framework be applied to identify the stage at which errors in an internal process occur at ING, and what steps should be included in the analysis plan? */
+    width: 100%;
+    max-width: 1184px;
+  
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  /* or 133% */
+  
+  color: #FFFFFF;
+  
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  
+  }
+  .answers{
+    /* Answers */
+  
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 0px 0px;
+  gap: 12px;
+  flex-wrap: wrap;
+  
+  width: 100%;
+  max-width: 1184px;
+  height: 580px;
+  /*height: 472px;*/
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+  }
+  .pickOption {
+  
+  width: 137px;
+  height: 32px;
+  
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  
+  color: rgba(255, 255, 255, 0.6);
+  
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  
+  }
+  .answer{
+    /* Multiple choice option */
+  
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 32px;
+  gap: 24px;
+  
+  width: 100%;
+  max-width: 1184px;
+  
+  background: #9548F5;
+  border-radius: 12px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  
+  }
+  
+  .ellipse{
+  /* Ellipse 1 */
+  
+  box-sizing: border-box;
+  
+  width: 24px;
+  height: 24px;
+  
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  
+  
+  }
+  
+  .option{
+    /* By conducting a broad exploratory analysis of all review data without a specific focus */
+  width: 100%;
+  max-width: 1072px;
+  height: 23px;
+  
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  /* identical to box height */
+  
+  color: #FFFFFF;
+  
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+  
+  }
+  .navigate{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 32px;
+    gap: 1352px;
+    
+    width: 100%;
+    max-width: 1512px;
+    height: 48px;
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+  .navigateRight{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0px 32px;
+    gap: 1352px;
+    
+    width: 100%;
+    max-width: 1512px;
+    height: 48px;
     
     
     /* Inside auto layout */
