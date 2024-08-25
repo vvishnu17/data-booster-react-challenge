@@ -1,40 +1,115 @@
-# Welcome to Remix!
+# React Remix Application for Course Lessons
 
-- 📖 [Remix docs](https://remix.run/docs)
+## Overview
 
-## Development
+This project is a React Remix application designed to manage and present course lessons. The application includes video playback using Vimeo, interactive quiz exercises, and responsive navigation. The project is built with a focus on providing a seamless user experience across desktop and mobile devices.
 
-Run the dev server:
+## Features
+
+- **Video Playback**: Stream course videos directly using the Vimeo platform.
+- **Quiz Exercises**: Users can engage in interactive quizzes after watching the videos.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
+- **Navigation**: Easily navigate through the course content using previous and next buttons.
+
+## Installation
+
+Follow these steps to set up the project locally:
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/vvishnu17/data-booster-react-challenge.git
+cd data-booster-react-challenge
+```
+
+## Install Dependencies
+Ensure you have Node.js installed. Then, install the required dependencies:
+
+```shellscript
+npm install
+```
+## Start the Development Server
+To start the development server, run:
 
 ```shellscript
 npm run dev
 ```
-
-## Deployment
-
-First, build your app for production:
+## Build for Production
+To build the project for production, use:
 
 ```sh
 npm run build
 ```
 
-Then run the app in production mode:
+## Run in Production Mode
+After building, you can run the application in production mode with:
 
 ```sh
 npm start
 ```
 
-Now you'll need to pick a host to deploy it to.
+## Project Structure
+The project is organized as follows:
 
-### DIY
+.
+├── public/                  # Static assets (e.g., images, icons)
+├── app/
+│   ├── components/          # React components
+│   │   ├── VideoExercise.jsx
+│   │   ├── QuizExercise.jsx
+│   ├── routes/              # Remix routes
+│   │   ├── CourseLessons.jsx
+│   ├── styles/              # Custom CSS files
+│   ├── assets/              # JSON data and other assets
+│   └── entry.client.tsx     # Remix entry point
+├── package.json             # Project dependencies and scripts
+├── remix.config.js          # Remix configuration
+└── README.md                # Project documentation (this file)
 
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
+# Components
+## VideoExercise Component
 
-Make sure to deploy the output of `npm run build`
+The VideoExercise.jsx component is responsible for rendering video content using the ReactPlayer library to stream videos from Vimeo. Users can interact with the video through play, pause, and control buttons.
 
-- `build/server`
-- `build/client`
+## QuizExercise Component
 
-## Styling
+The QuizExercise.jsx component handles rendering multiple-choice quiz questions. Users can select answers, and the component manages the state of the selected options.
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+## CourseLessons Component
+
+The CourseLessons.jsx component manages the overall flow of the lessons. It handles navigation between lessons and exercises, and conditionally renders the VideoExercise or QuizExercise components based on the type of content.
+
+## Routing
+
+This application includes the following main route:
+
+### Course Lessons: 
+Accessible at baseurl/courselessons, this route serves as the entry point for users to start the course, watch videos, and take quizzes.
+
+
+## Deployment
+
+This project can be deployed on platforms like Vercel, Netlify, or any other service that supports Node.js and Remix applications.
+
+## Deploy on Vercel
+
+1. Push your code to a GitHub repository.
+2. Link your GitHub repository to Vercel.
+3. Vercel will automatically detect the Remix framework and configure the deployment.
+
+## Known Issues
+### Video Loading Time: 
+Videos may take time to load if they are large or if the server is slow. Consider using a CDN to optimize load times.
+
+
+
+
+
+
+
+
+
+
+
+
+
