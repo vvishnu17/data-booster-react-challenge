@@ -145,6 +145,7 @@ body {
     flex-grow: 0;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: normal; /* Forces text to wrap to a new line */
   }
   
   .answer:hover,
@@ -188,6 +189,7 @@ body {
     flex: none;
     order: 1;
     flex-grow: 1;
+    white-space: normal; /* Forces text to wrap to a new line */
   }
   
   .navigate {
@@ -250,10 +252,12 @@ body {
     .answer {
       padding: 16px; /* Adjusted for mobile */
       gap: 12px;
+      white-space: normal;
     }
   
     .option {
       font-size: 18px; /* Adjusted for mobile */
+      white-space: normal;
     }
   
     .navigate {
