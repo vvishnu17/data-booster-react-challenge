@@ -251,10 +251,6 @@ outline: none;
     gap: 12px;
     white-space: normal;
   }
-  .ellipse{
-    width: 12px;
-    height: 12px;
-  }
 
   .option {
     font-size: 18px; /* Adjusted for mobile */
@@ -294,6 +290,11 @@ outline: none;
     padding: 12px; /* Adjusted for small screens */
     gap: 8px;
     white-space: normal;
+  }
+  .ellipse{
+    width: 12px;
+    height: 12px;
+    border-color: white;
   }
 
   .option {
