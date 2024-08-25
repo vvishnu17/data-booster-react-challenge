@@ -313,6 +313,7 @@ function QuizExercise({ exercise }) {
 }
 function CourseLessons() {
   const { lessons: lessons2 } = lessonsdata;
+  console.log(lessons2);
   const [currentLessonIndex, setCurrentLessonIndex] = useState(0);
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
   const currentLesson = lessons2[currentLessonIndex];
@@ -325,6 +326,8 @@ function CourseLessons() {
     } else if (!isLastLesson) {
       setCurrentLessonIndex((prevIndex) => prevIndex + 1);
       setCurrentExerciseIndex(0);
+    } else {
+      alert("You've completed all lessons and exercises!");
     }
   };
   const handlePrevious = () => {
@@ -347,8 +350,14 @@ function CourseLessons() {
       {
         className: currentLessonIndex === 0 && currentExerciseIndex === 0 ? "navigateRight" : "navigate",
         children: [
-          (currentLessonIndex > 0 || currentExerciseIndex > 0) && /* @__PURE__ */ jsx("img", { src: "/icons/arrow-left.svg", className: "navLeft", onClick: handlePrevious }),
-          (!isLastLesson || !isLastExercise) && /* @__PURE__ */ jsx("img", { src: "/icons/arrow-right.svg", className: "navRight", onClick: handleNext })
+          (currentLessonIndex > 0 || currentExerciseIndex > 0) && /*<button className="navleft" onClick={handlePrevious}>
+            &#8592;
+          </button>*/
+          /* @__PURE__ */ jsx("img", { src: "/icons/arrow-left.svg", className: "navLeft", onClick: handlePrevious }),
+          (!isLastLesson || !isLastExercise) && /*<button className="navright" onClick={handleNext}>
+            &#8594;
+          </button>*/
+          /* @__PURE__ */ jsx("img", { src: "/icons/arrow-right.svg", className: "navRight", onClick: handleNext })
         ]
       }
     )
@@ -406,7 +415,7 @@ const route2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProper
   default: Index,
   meta
 }, Symbol.toStringTag, { value: "Module" }));
-const serverManifest = { "entry": { "module": "/assets/entry.client-UkE5_OxS.js", "imports": ["/assets/jsx-runtime-DrMmwDmt.js", "/assets/components-B1HEf7L6.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/root-Bmu4ZXuF.js", "imports": ["/assets/jsx-runtime-DrMmwDmt.js", "/assets/components-B1HEf7L6.js"], "css": ["/assets/root-Bq5CstmY.css"] }, "routes/CourseLessons": { "id": "routes/CourseLessons", "parentId": "root", "path": "CourseLessons", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/CourseLessons-DiIF4QiN.js", "imports": ["/assets/jsx-runtime-DrMmwDmt.js"], "css": ["/assets/CourseLessons-CnIg8wm3.css"] }, "routes/_index": { "id": "routes/_index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/_index-Bn7UzA-z.js", "imports": ["/assets/jsx-runtime-DrMmwDmt.js"], "css": [] } }, "url": "/assets/manifest-b8e3a111.js", "version": "b8e3a111" };
+const serverManifest = { "entry": { "module": "/assets/entry.client-UkE5_OxS.js", "imports": ["/assets/jsx-runtime-DrMmwDmt.js", "/assets/components-B1HEf7L6.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/root-Bmu4ZXuF.js", "imports": ["/assets/jsx-runtime-DrMmwDmt.js", "/assets/components-B1HEf7L6.js"], "css": ["/assets/root-Bq5CstmY.css"] }, "routes/CourseLessons": { "id": "routes/CourseLessons", "parentId": "root", "path": "CourseLessons", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/CourseLessons-DLG1l_sJ.js", "imports": ["/assets/jsx-runtime-DrMmwDmt.js"], "css": ["/assets/CourseLessons-DiIaek2-.css"] }, "routes/_index": { "id": "routes/_index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/_index-Bn7UzA-z.js", "imports": ["/assets/jsx-runtime-DrMmwDmt.js"], "css": [] } }, "url": "/assets/manifest-c62b37d5.js", "version": "c62b37d5" };
 const mode = "production";
 const assetsBuildDirectory = "build\\client";
 const basename = "/";
