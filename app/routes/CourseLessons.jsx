@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import lessonsdata from "../assets/lessons.json";
 import VideoExercise from "../components/VideoExercise";
 import QuizExercise from "../components/QuizExercise";
-import "../styles/CourseLessons.css";
+import "../styles/Test.css";
 
 /*TODO: Fetch lessons data from the server using the loader function.
 import { useLoaderData } from '@remix-run/react';
