@@ -4,14 +4,15 @@ import ReactPlayer from "react-player/vimeo";
 
 const VideoExercise = ({ exercise }) => {
   return (
-    <div className="videoplayer">
+    <>
       <ReactPlayer
         url = {exercise.url}
         controls={true}
-        width="100%"
+        width="90%"
         height="100%"
+        className="videoplayer"
       />
-    </div>
+    </>
   );
 };
 

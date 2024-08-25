@@ -1,12 +1,34 @@
 import React,{useState} from "react";
+/*import { useLoaderData } from '@remix-run/react';*/
 import lessonsdata from "../assets/lessons.json";
 import VideoExercise from "../components/VideoExercise";
 import QuizExercise from "../components/QuizExercise";
 import "../styles/CourseLessons.css";
 
+/*export const loader = async () => {
+  try {
+    const response = await fetch("http://localhost:5173/assets/lessons.json");
+    console.log(`${process.env.BASE_URL}`);
+    
+    if (!response.ok) {
+      throw new Error("Failed to fetch lessons data.");
+    }
+
+    const lessons = await response.json();
+    return lessons;
+
+  } catch (error) {
+    throw new Response("Error fetching lessons data", { status: 500 });
+  }
+};*/
+
 function CourseLessons() {
+
   const { lessons } = lessonsdata;
   console.log(lessons);
+  /*const data = useLoaderData();
+  console.log(data);*/
+
 
   // State to keep track of the current lesson and exercise
   const [currentLessonIndex, setCurrentLessonIndex] = useState(0);
@@ -62,16 +84,19 @@ function CourseLessons() {
       >
         {/* Show the "Previous" button if not on the first exercise of the first lesson */}
         {(currentLessonIndex > 0 || currentExerciseIndex > 0) && (
-          <button className="navleft" onClick={handlePrevious}>
+          /*<button className="navleft" onClick={handlePrevious}>
             &#8592;
-          </button>
+          </button>*/
+          <img src="/icons/arrow-left.svg" className="navLeft" onClick={handlePrevious} />
         )}
 
         {/* Show the "Next" button only if we are not on the last exercise of the last lesson */}
         {(!isLastLesson || !isLastExercise) && (
-          <button className="navright" onClick={handleNext}>
+          /*<button className="navright" onClick={handleNext}>
             &#8594;
-          </button>
+          </button>*/
+          <img src="/icons/arrow-right.svg" className="navRight" onClick={handleNext} />
+
         )}
       </div>
     </div>
