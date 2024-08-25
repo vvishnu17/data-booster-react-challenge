@@ -45,6 +45,8 @@
     flex: none;
     order: 0;
     flex-grow: 0;
+    /*new code for buttons */
+    position: relative;
   }
   .title{
     width: 90%;
@@ -70,7 +72,35 @@
     object-fit: fill;
     padding: 0px;
     margin: 0px auto;
+    /*new code for buttons */
+    position: relative;
   }
+  /*new code for buttons */
+  .video-icons {
+    position: absolute;
+    top: 15%;
+    right: 6%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    z-index: 2; /* Ensures icons appear above the video */
+  }
+  .video-icon {
+    max-width: 32px;
+    max-height: 32px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+   /* Hover effect for icons */
+   .video-icon:hover {
+    transform: scale(1.1);
+  }
+  @media (max-width: 1150px) {
+    .video-icons {
+      display: none; /* Hide the icons */
+    }
+  }  
+  /*new code for buttons */
   .question{
     width: 90%;
     max-width: 1184px;
